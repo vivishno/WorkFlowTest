@@ -19,7 +19,7 @@ jobs:
     - name: Azure CLI script file
       uses: azure/CLI@v1
       with:
-        azcliversion: 2.0.72
+        azcliversion: 2.6.0
         inlineScript: |
             az deployment group create "newGroup" --resource-group ExampleGroup --template-file azuredeploy.json
 
