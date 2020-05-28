@@ -21,4 +21,5 @@ jobs:
       with:
         azcliversion: 2.6.0
         inlineScript: |
-          az deployment group create --resource-group ExampleGroup --template-file $GITHUB_WORKSPACE/azuredeploy.json
+          chmod +x $GITHUB_WORKSPACE/sampleScript.sh
+          $GITHUB_WORKSPACE/sampleScript.sh
