@@ -21,6 +21,6 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-          echo "Start"
-          ls
-          echo "End"
+          chmod +x sampleScript.sh
+          sampleScript.sh
+
