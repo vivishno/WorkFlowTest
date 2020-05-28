@@ -21,6 +21,6 @@ jobs:
       with:
         azcliversion: 2.6.0
         inlineScript: |
-          chmod +x sampleScript.sh
-          sampleScript.sh
+          chmod +x $GITHUB_WORKSPACE/sampleScript.sh
+          $GITHUB_WORKSPACE/sampleScript.sh
 
