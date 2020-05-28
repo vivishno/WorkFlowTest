@@ -22,5 +22,5 @@ jobs:
         azcliversion: 2.0.72
         inlineScript: |
           pwd
-          chmod +x sampleScript.sh
-          sampleScript.sh
+          chmod +x /.github/sampleScript.sh
+          /.github/sampleScript.sh
