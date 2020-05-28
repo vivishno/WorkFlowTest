@@ -21,5 +21,7 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
+          pwd
+          ls
           chmod +x vivishno/WorkFlowTest/sampleScript.sh
           vivishno/WorkFlowTest/sampleScript.sh
