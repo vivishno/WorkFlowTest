@@ -1,3 +1,1 @@
-#!/bin/bash
-
-az storage account list
+az deployment group create "newGroup" --resource-group ExampleGroup --template-file azuredeploy.json
