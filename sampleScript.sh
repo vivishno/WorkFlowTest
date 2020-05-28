@@ -1,1 +1,1 @@
-az deployment group create --resource-group ExampleGroup --template-file azuredeploy.json
+az storage account list
