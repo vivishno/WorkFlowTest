@@ -15,7 +15,12 @@ jobs:
 
     - name: Checkout
       uses: actions/checkout@v1
-
+      
+    - name: Checkout2
+      uses: actions/checkout@master
+      with:
+        repository: 'vivishno/testAction'
+        path: 'testPath'
     - name: Azure CLI script file
       uses: azure/CLI@v1
       with:
