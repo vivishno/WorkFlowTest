@@ -3,17 +3,23 @@ on: [push]
 name: AzureCLISampleForFile
 
 jobs:
+
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
-      with:
-        repository: 'vivishno/testAction'
-
-    - uses: whiteducksoftware/azure-arm-action@v3
+    
+    - name: Azure Login
+      uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-        resourceGroupName: ExampleGroup
-        templateLocation: azuredeploy3.json
-        deploymentName: newDeployment2
+
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Azure CLI script file
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.6.0
+        inlineScript: |
+          chmod +x $GITHUB_WORKSPACE/sampleScript.sh
+          $GITHUB_WORKSPACE/sampleScript.sh
