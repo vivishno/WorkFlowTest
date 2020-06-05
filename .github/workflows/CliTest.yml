@@ -14,5 +14,5 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         resourceGroupName: ExampleGroup
-        templateLocation: azuredeploy2.json
+        templateLocation: vivishno/testAction/azuredeploy3.json
         deploymentName: newDeployment2
