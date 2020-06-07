@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Azure Login
-      run: testing.sh
     - uses: actions/github-script@v2
       with:
           script: |
