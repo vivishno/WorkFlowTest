@@ -11,8 +11,6 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-    - name: A
-      run: $GITHUB_WORKSPACE/sampleScript.sh
  
     - name: Checkout
       uses: actions/checkout@v1
