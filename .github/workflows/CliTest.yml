@@ -12,7 +12,7 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: tun
-      run:  /sampleScript.sh
+      run:  ls
     - name: Checkout
       uses: actions/checkout@v1
       
