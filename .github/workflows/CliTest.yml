@@ -11,13 +11,8 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-    - name: Azure CLI script file
-      uses: azure/CLI@v1
-      with:
-        azcliversion: 2.6.0
-        inlineScript: |
-          export a=10
-          echo "hello"+$a
+    - name: A
+      run: echo "::set-env name=a::yellow"
  
     - name: Checkout
       uses: actions/checkout@v1
