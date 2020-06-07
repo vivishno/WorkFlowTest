@@ -7,5 +7,5 @@ jobs:
     - uses: actions/github-script@v2
       id: set-result
       with:
-        script: a=1
+        script: testing.sh
         
