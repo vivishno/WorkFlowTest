@@ -8,7 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Azure Login
-      run: echo Hello world $FIRST_NAME
-      env:
-        FIRST_NAME: Vivek  
-         
+      run: testing.sh
+
