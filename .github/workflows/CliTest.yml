@@ -17,7 +17,7 @@ jobs:
         azcliversion: 2.6.0
         inlineScript: |
           export a=10
-          echo "hello"
+          echo "hello"+$a
  
     - name: Checkout
       uses: actions/checkout@v1
