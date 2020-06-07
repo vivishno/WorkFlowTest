@@ -27,4 +27,5 @@ jobs:
       with:
         azcliversion: 2.6.0
         inlineScript: |
-          echo "vivek "+$a
+          echo "::set-env name=b::yelloqw"
+          echo "vivek "+$b
