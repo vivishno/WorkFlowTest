@@ -8,5 +8,6 @@ jobs:
     steps:
       - uses: actions/github-script@v2
         with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-           echo "test successful"
+           echo "hello"
