@@ -25,5 +25,7 @@ jobs:
       with:
         azcliversion: 2.6.0
         inlineScript: |
+          export a=10
+          echo "hello"+$a
           echo "::set-env name=action_state::yellow"
           echo $action_state
