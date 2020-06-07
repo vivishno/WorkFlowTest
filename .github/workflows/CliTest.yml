@@ -1,6 +1,4 @@
-on: [push]
-
-name: AzureCLISampleForFile
+on: push
 
 jobs:
   echo-input:
@@ -10,4 +8,6 @@ jobs:
       - uses: actions/github-script@v2
         with:
           script: |
-            echo "hello vivek"
+            const path = require('path')
+            const scriptPath = path.resolve('./path/to/script.js')
+            console.log(require(scriptPath)({context}))
