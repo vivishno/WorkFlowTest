@@ -27,5 +27,4 @@ jobs:
       with:
         azcliversion: 2.6.0
         inlineScript: |
-          echo "::set-env name=b::yelloqw"
-          echo "vivek "+$b
+          echo $GITHUB_WORKSPACE/sampleScript.sh
