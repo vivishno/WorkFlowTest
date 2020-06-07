@@ -2,28 +2,13 @@ on: [push]
 
 name: AzureCLISampleForFile
 
+  
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    
     - name: Azure Login
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-    - name: Checkout
-      uses: actions/checkout@v1
-      
-    - name: Checkout2
-      uses: actions/checkout@master
-      with:
-        repository: 'vivishno/testAction'
-        path: 'testPath'
-    - name: Azure CLI script file
-      uses: azure/CLI@v1
-      with:
-        azcliversion: 2.6.0
-        inlineScript: |
-          chmod +x $GITHUB_WORKSPACE/sampleScript.sh
-          $GITHUB_WORKSPACE/sampleScript.sh
+      run: echo Hello world $FIRST_NAME
+      env:
+        FIRST_NAME: Vivek  
+         
