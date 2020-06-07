@@ -26,4 +26,4 @@ jobs:
         azcliversion: 2.6.0
         inlineScript: |
           echo "::set-env name=action_state::yellow"
-          echo $name
+          echo $action_state
