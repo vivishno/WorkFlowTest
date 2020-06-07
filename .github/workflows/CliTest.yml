@@ -7,9 +7,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
     - name: Checkout
       uses: actions/checkout@v1
-    - name: tun
-      run:  |
-        pwd
-        ls
+      
+    - name: Checkout2
+      uses: actions/checkout@master
+      with:
+        repository: 'vivishno/testAction'
+        path: 'testPath'
+    - name: envVar
+      run: testing.sh
+    - name: Azure CLI script file
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.6.0
+        inlineScript: |
+          echo $SELECTED_COLOR+" yo"
