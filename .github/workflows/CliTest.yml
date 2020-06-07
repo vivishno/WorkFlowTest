@@ -1,11 +1,19 @@
-on: push
+on: [push]
+
+name: AzureCLISampleForFile
 
 jobs:
-  echo-input:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/github-script@v2
-      id: set-result
+    
+    - name: Azure Login
+      uses: azure/login@v1
       with:
-        script: testing.sh
-        
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Checkout
+      uses: actions/checkout@v1
+      
+    - name: Checkout2
+      run: testing.sh
