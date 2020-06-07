@@ -2,15 +2,11 @@ on: [push]
 
 name: AzureCLISampleForFile
 
-
 jobs:
-  build-and-deploy:
+  comment:
     runs-on: ubuntu-latest
     steps:
-      - name: Azure Login
       - uses: actions/github-script@v2
         with:
           script: |
-            echo "::set-env name=tmp::yellow"
-            echo $tmp+"hellotest"
-
+           echo "test successful"
