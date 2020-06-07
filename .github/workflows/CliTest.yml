@@ -3,11 +3,11 @@ on: [push]
 name: AzureCLISampleForFile
 
 jobs:
-  comment:
+  echo-input:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/github-script@v2
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-           echo "hello"
+            echo "hello vivek"
