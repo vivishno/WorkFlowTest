@@ -21,7 +21,7 @@ jobs:
         repository: 'vivishno/testAction'
         path: 'testPath'
     - name: envVar
-      run: testing.sh
+      run: /testing.sh
     - name: Azure CLI script file
       uses: azure/CLI@v1
       with:
