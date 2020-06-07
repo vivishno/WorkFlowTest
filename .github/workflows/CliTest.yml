@@ -24,6 +24,7 @@ jobs:
       run: |
         pwd
         ls
+        chmod +x ./testing.sh
         ./testing.sh
     - name: Azure CLI script file
       uses: azure/CLI@v1
