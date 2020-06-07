@@ -12,7 +12,7 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: tun
-      run:  $GITHUB_WORKSPACE/sampleScript.sh
+      run:  sampleScript.sh
     - name: Checkout
       uses: actions/checkout@v1
       
