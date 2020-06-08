@@ -14,21 +14,23 @@ jobs:
 
     - name: Checkout
       uses: actions/checkout@v1
-      
-    - name: Checkout2
+    
+    - name: Setup environment variables
+      run: |
+        chmod +x ./configuration.sh
+        ./configuration.sh      
+    
+    - name: Checkout Template Repo
       uses: actions/checkout@master
       with:
-        repository: 'vivishno/testAction'
-        path: 'testPath'
-    - name: envVar
-      run: |
-        pwd
-        ls
-        chmod +x ./testing.sh
-        ./testing.sh
+        repository: $TEMPLATE_REPO_PATH
+        path: 'file_path'
+
     - name: Azure CLI script file
       uses: azure/CLI@v1
       with:
         azcliversion: 2.6.0
         inlineScript: |
-          echo $SELECTED_COLOR+" yo"
+          echo $TEMPLATE_REPO_PATH +" 1"
+          echo $TEMPLATE_FILE +" 2"
+          echo $RESOURCE_GROUP +" 3"
