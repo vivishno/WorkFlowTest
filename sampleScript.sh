@@ -1,1 +1,1 @@
-az deployment group create --resource-group ExampleGroup --template-file testPath/azuredeploy3.json
+az deployment group create --resource-group $RESOURCE_GROUP --template-file file_path/$TEMPLATE_FILE
