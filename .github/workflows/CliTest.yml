@@ -26,4 +26,4 @@ jobs:
       with:
         azcliversion: 2.6.0
         inlineScript: |
-          az deployment group create --resource-group $RESOURCE_GROUP --template-file $TEMPLATE_FILE
+          az deployment group create --resource-group $RESOURCE_GROUP --template-file $TEMPLATE_FILE --parameters azuredeploy.params.json
