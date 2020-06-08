@@ -15,7 +15,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     
-    - name: Setup environment variables
+    - name: Setup environment $RESOURCE_GROUP
       run: |
         chmod +x ./configuration.sh
         ./configuration.sh      
@@ -23,7 +23,7 @@ jobs:
     - name: Checkout Template Repo
       uses: actions/checkout@master
       with:
-        repository: echo $TEMPLATE_REPO_PATH
+        repository: $TEMPLATE_REPO_PATH
         path: 'file_path'
 
     - name: Azure CLI script file
