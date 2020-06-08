@@ -9,7 +9,7 @@
         "workspaceName": {
 
             "type": "string",
-            "defaultValue": "Check01",
+            "defaultValue": "testing-0601",
 
             "metadata": {
 
